@@ -1,0 +1,22 @@
+const gameList = document.getElementById("game-list");
+const gameFrame = document.getElementById("game-frame");
+
+fetch("games.json")
+  .then(res => res.json())
+  .then(data => {
+    data.games.forEach(game => {
+      const item = document.createElement("div");
+      item.className = "game-item";
+      item.textContent = game.name;
+
+      item.addEventListener("click", () => {
+        gameFrame.src = game.url;
+      });
+
+      gameList.appendChild(item);
+    });
+  })
+  .catch(err => {
+    gameList.innerHTML = "Failed to load games.";
+    console.error(err);
+  });

@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "name": "Slope",
+      "url": "https://ubg365.github.io/slope/"
+    },
+    {
+      "name": "Run 3",
+      "url": "https://ubg365.github.io/run-3/"
+    },
+    {
+      "name": "Tetris",
+      "url": "https://tetris.com/play-tetris"
+    }
+  ]
+}
